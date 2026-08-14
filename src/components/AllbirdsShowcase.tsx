@@ -1,0 +1,13 @@
+import { Search, ShoppingBag } from 'lucide-react';
+import { Footer, Hero, ProductRail, TileGrid } from './ui';
+
+const products = [
+  { name:'Breeze Runner', detail:'Cloud grey', price:'$98', badge:'NEW', tone:'mist' },
+  { name:'Daylight Slip-On', detail:'Warm sand', price:'$104', badge:'NEW', tone:'sand' },
+  { name:'Harbor Trainer', detail:'Deep tide', price:'$110', tone:'navy' },
+  { name:'Canvas Roamer', detail:'Sunwashed clay', price:'$82', tone:'clay' },
+];
+
+export function AllbirdsShowcase() {
+  return <section className="reference allbirds" aria-labelledby="allbirds-title"><div className="reference-label"><span>Reference 01</span><h1 id="allbirds-title">Nature-led essentials</h1><p>Structure study inspired by Allbirds</p></div><div className="announcement">Complimentary ground delivery over $100</div><header className="allbirds-nav"><a className="wordmark" href="#">fieldstep</a><nav><a href="#">New</a><a href="#">Women</a><a href="#">Men</a><a href="#">Everyday</a></nav><div><Search/><ShoppingBag/></div></header><Hero eyebrow="The new trail-knit collection" title="Light on your feet. Easy on your day." actions={[{label:'SHOP MEN'},{label:'SHOP WOMEN'}]} tone="forest"/><TileGrid columns={3} tiles={[{title:'Just landed',eyebrow:'01',action:'Explore new',tone:'lime'},{title:'Made to roam',eyebrow:'02',action:'Shop men',tone:'stone'},{title:'Soft by nature',eyebrow:'03',action:'Shop women',tone:'rose'}]}/><ProductRail title="Everyday favorites" products={products}/><Hero title="Pack light. Wander far." body="Breathable layers and easygoing shoes for trips with no strict itinerary." actions={[{label:'SHOP TRAVEL'}]} tone="sky" compact/><TileGrid columns={3} tiles={[{title:'Fresh tones for warm days',action:'See the palette',tone:'coral'},{title:'New-season comfort',action:'Browse arrivals',tone:'cream'},{title:'Outside, naturally',action:'Find your pair',tone:'moss'}]}/><section className="values"><div><p className="eyebrow">COMFORT, CONSIDERED</p><h3>Made for all-day movement</h3><p>Flexible shapes, responsive cushioning, and breathable textiles keep the rhythm easy.</p></div><div><p className="eyebrow">MATERIALS, REIMAGINED</p><h3>Thoughtful from the ground up</h3><p>We explore lower-impact fibers and simpler constructions for pieces that feel naturally good.</p></div></section><Footer title="Stay in step" description="Occasional notes on new colors, materials, and places worth walking." groups={[{title:'Help',links:['Contact','Delivery & returns','Care guide']},{title:'Shop',links:['Women','Men','Accessories']},{title:'About',links:['Our approach','Materials','Journal']}]} /></section>;
+}
